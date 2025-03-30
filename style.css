@@ -256,7 +256,7 @@ ul {
 /* Container for the iframe */
 .iframe-container {
     width: 100%; /* Container takes full width */
-    max-width: calc(100% - 140px); /* Width minus 70px on each side */
+    max-width: calc(100% - 120px); /* Width minus 70px on each side */
     margin: 0 auto; /* Centers the container horizontally */
     padding: 0 70px; /* 70px margin left and right */
     box-sizing: border-box; /* Ensures padding is included in the width */
@@ -269,7 +269,7 @@ ul {
 /* Responsive iframe styling */
 .responsive-iframe {
     width: 100%; /* Take up full width of the container */
-    height: 80vh; /* Limit the height to 80% of the viewport height */
+    height: 90vh; /* Limit the height to 80% of the viewport height */
     border: none; /* Removes iframe border */
 }
 
