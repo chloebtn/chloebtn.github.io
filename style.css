@@ -171,8 +171,8 @@ ul {
 .project-report ul,
 .project-report ol {
     text-align: left;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 70px;
+    margin-right: 70px;
     line-height: 1.5;
     text-align: justify;
 }
@@ -192,8 +192,8 @@ ul {
 
 /* Images styling in reports*/
 .project-report img {
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 70px;
+    margin-right: 70px;
     width: 500px;
 }
 
