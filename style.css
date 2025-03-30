@@ -178,9 +178,9 @@ ul {
 }
 
 .project-report .image-text-container {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 2px;
+    gap: 1px;
 }
 
 .project-report .text-container {
