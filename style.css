@@ -251,3 +251,23 @@ ul {
     height: 90vh; /* Uses 90% of the viewport height */
     border: none;
 }
+
+/* Style Excel*/
+<style>
+.iframe-container {
+    display: flex;
+    justify-content: center;  /* Centers the iframe horizontally */
+    align-items: center;  /* Centers vertically if needed */
+    width: calc(100% - 140px);  /* Ensures left & right margin of 70px */
+    max-width: 100%;  /* Prevents overflow */
+    margin: 0 auto;  /* Centers it */
+    padding: 20px 0;  /* Optional: Adds some spacing */
+}
+
+iframe {
+    width: 100%;  /* Makes it responsive */
+    max-width: 100vw;  /* Prevents it from overflowing the screen */
+    height: 500px;  /* Adjust as needed */
+    border: none;  /* Removes iframe border */
+}
+</style>
