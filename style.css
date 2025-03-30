@@ -180,13 +180,13 @@ ul {
 .project-report .image-text-container {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 2px;
 }
 
 .project-report .text-container {
     display: flex;
     flex-direction: column; /* Stacks text elements vertically */
-    gap: 5px;
+    gap: 2px;
 }
 
 
