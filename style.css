@@ -256,20 +256,22 @@ ul {
 /* Container for the iframe */
 .iframe-container {
     width: 100%; /* Container takes full width */
-    padding: 0 70px; /* 70px margin on the left and right */
+    max-width: calc(100% - 140px); /* Width minus 70px on each side */
+    margin: 0 auto; /* Centers the container horizontally */
+    padding: 0 70px; /* 70px margin left and right */
+    box-sizing: border-box; /* Ensures padding is included in the width */
     display: flex;
     justify-content: center; /* Center horizontally */
-    position: relative; /* For positioning the iframe */
-    box-sizing: border-box; /* Ensures padding is included in the width */
+    align-items: center; /* Optional: centers vertically */
+    height: 100vh; /* Ensure the container takes the full viewport height */
 }
 
 /* Responsive iframe styling */
 .responsive-iframe {
-    width: 100%; /* Takes full width of the container */
-    height: 100%; /* Takes full height of the container */
-    max-width: 100%; /* Prevents overflowing horizontally */
-    max-height: 80vh; /* Prevents it from taking more than 80% of the viewport height */
+    width: 100%; /* Take up full width of the container */
+    height: 80vh; /* Limit the height to 80% of the viewport height */
     border: none; /* Removes iframe border */
 }
+
 
 
