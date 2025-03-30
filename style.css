@@ -255,19 +255,21 @@ ul {
 /* Style Excel*/
 /* Container for the iframe */
 .iframe-container {
-    width: 100%; /* Use full width */
-    max-width: none; /* Remove any max-width constraints */
-    margin: 0 auto; /* Center the container horizontally */
+    width: 100%; /* Ensure the container takes full width */
+    height: 100vh; /* Make the container take up the entire viewport height */
+    padding: 0 70px; /* Apply 70px left and right margin */
     display: flex;
-    justify-content: center; /* Center horizontally */
-    padding: 0 70px; /* 70px margin on the left and right */
+    justify-content: center; /* Center the iframe horizontally */
+    position: relative; /* Needed for positioning child elements */
 }
 
 /* Responsive iframe styling */
 .responsive-iframe {
-    width: 100%; /* Full width of the container */
-    height: 80vh; /* Adjust height to take up a larger portion of the screen */
-    border: none; /* Removes iframe border */
-    max-height: none; /* Allow iframe height to expand */
+    width: 100%; /* Ensures the iframe takes the full container width */
+    max-width: 100vw; /* Ensure no overflow on the screen */
+    height: 80%; /* Adjust height to take 80% of the container's height */
+    border: none; /* Remove iframe border */
+    position: absolute; /* Use absolute positioning to remove any constraints */
+    top: 10%; /* Center vertically (by applying 10% top padding) */
 }
 
