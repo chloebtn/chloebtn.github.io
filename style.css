@@ -265,6 +265,6 @@ ul {
 /* Responsive iframe styling */
 .responsive-iframe {
     width: 100%; /* Takes full width of the container */
-    height: 80vh; /* Adjust the height as per your need */
+    height: 700px; /* Adjust the height as per your need */
     border: none; /* Removes the iframe border */
 }
