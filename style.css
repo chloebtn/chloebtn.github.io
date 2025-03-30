@@ -161,8 +161,11 @@ ul {
 /* Center titles in the Project Detail section */
 .project-detail h1,
 .project-detail h2,
-.project-detail p {
+.project-detail p,
+.project-detail iframe{
     text-align: center;
+    margin-left: 70px;
+    margin-right: 70px;
 }
 
 /* Put to the left title within report*/
