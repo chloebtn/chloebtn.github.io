@@ -83,6 +83,17 @@ footer {background-color: #5F9275;  /* Dark background for footer */
     margin: 10px !important;
 }
 
+.projects .project h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.projects .project p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
 
 .projects .project img {max-width: 100%;
     border-radius: 8px;
