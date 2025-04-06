@@ -1,15 +1,15 @@
 /* General Styling: Set up base styles and fonts */
 body {
-    font-family: 'Roboto', sans-serif;  /* Apply the Google Font */
-    background-color: #ffffff;  /* Light gray background */
-    color: #2c3e50;  /* Dark text color for contrast */
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
+    color: #2c3e50;
     margin: 0;
     padding: 0;
 }
 
 h1 {
-    font-weight: 500;  /* Bold headings */
-    line-height: 1.5;  /* Make headings easier to read */
+    font-weight: 500;
+    line-height: 1.5;
 }
 
 h2 {
@@ -26,46 +26,35 @@ h3 {
 
 /* Navigation Bar: Customize the nav bar */
 nav {
-    background-color: #5F9275;  /* Dark gray-blue color */
+    background-color: #5F9275;
     padding: 10px 20px;
     text-align: center;
 }
 
 nav a {
-    color: white;  /* White text for links */
+    color: white;
     text-decoration: none;
     margin: 0 15px;
     font-size: 18px;
+    padding: 10px;
+    display: inline-block;
 }
 
 nav a:hover {
-    background-color: #5F9275;  /* Hover effect for links */
-    padding: 10px 20px;
+    background-color: #5F9275;
     border-radius: 5px;
-}
-
-body, nav, footer, main {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
-
-nav a {
-  padding: 10px;
-  display: inline-block;
-  text-decoration: none;
 }
 
 /* Footer: Customize footer styles */
 footer {
-    background-color: #5F9275;  /* Dark background for footer */
+    background-color: #5F9275;
     color: white;
     text-align: center;
     padding: 20px;
     font-size: 14px;
 }
 
-/* Intro Section: This is where your image and intro text go */
+/* Intro Section */
 .intro {
     background-color: #ffffff;
     padding: 40px 0;
@@ -88,7 +77,6 @@ footer {
     font-size: 18px;
     color: #7f8c8d;
 }
-
 
 /* Projects Section in index */
 .projects {
@@ -124,32 +112,26 @@ footer {
 }
 
 .projects .project a:hover {
-    background-color: #5F9275;  /* Change color when hovered */
+    background-color: #5F9275;
 }
-
-
 
 /* LinkedIn Badge Section in Contact */
-
 .linkedin .badge-base__link {
-    color: #ffffff;  /* Makes the text white */
-    text-decoration: none;  /* Remove underline */
-    pointer-events: none;  /* Disables the click functionality */
+    color: #ffffff;
+    text-decoration: none;
+    pointer-events: none;
 }
+
 .linkedin .badge-base {
-    display: inline-block;   /* Ensures it stays inline */
-    text-align: center;      /* Centers the content inside the badge */
+    display: inline-block;
+    text-align: center;
 }
 
-
-/* About page styling*/
+/* About page styling */
 .about {
     background-color: #ffffff;
-    text-align: center; /* Centers text */
+    text-align: center;
 }
-
-
-
 
 .about .profile-img {
     width: 150px;
@@ -169,29 +151,26 @@ ul {
     list-style-type: square;
 }
 
-
-/* PROJECTS */
-/* Center titles in the Project Detail section */
+/* Project Detail Section */
 .project-detail h1,
 .project-detail h2,
 .project-detail p,
-.project-detail iframe{
+.project-detail iframe {
     text-align: center;
     margin-left: 70px;
     margin-right: 70px;
 }
 
-/* Put to the left title within report*/
+/* Project Report Section */
 .project-report h1,
 .project-report h2,
 .project-report p,
 .project-report ul,
 .project-report ol {
-    text-align: left;
+    text-align: justify;
     margin-left: 70px;
     margin-right: 70px;
     line-height: 1.5;
-    text-align: justify;
 }
 
 .project-report .image-text-container {
@@ -202,88 +181,76 @@ ul {
 
 .project-report .text-container {
     display: flex;
-    flex-direction: column; /* Stacks text elements vertically */
+    flex-direction: column;
     gap: 2px;
 }
 
-
-/* Images styling in reports*/
+/* Images styling in reports */
 .project-report img {
     margin-left: 70px;
     margin-right: 70px;
     width: 500px;
 }
 
-
-
-/* Ensure the GitHub link is centered */
+/* GitHub Link */
 .github-link {
-    text-align: center; /* Centers inline elements inside */
-    margin-top: 20px; /* Adds spacing above */
-    margin-bottom: 40px; /* Space below to separate from footer */
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
 }
 
-/* GitHub button style */
 .github-link a {
-    display: inline-block; /* Allows padding and margin to work properly */
+    display: inline-block;
     padding: 10px 20px;
-    background-color: #5F9275; /* Keep your original theme color */
+    background-color: #5F9275;
     color: white;
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-    text-align: center; /* Ensures text is centered inside */
+    text-align: center;
 }
 
-/* Hover effect */
 .github-link a:hover {
-    background-color: #5F9275; /* Slightly darker on hover */
+    background-color: #5F9275;
 }
-
 
 /* PDF Embed Section */
 .pdf-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 40px auto; /* Centers and adds spacing */
+    margin: 40px auto;
     background: #ffffff;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    width: 90%;  /* Makes the section responsive */
-    max-width: 1000px; /* Restricts the width on large screens */
+    width: 90%;
+    max-width: 1000px;
 }
 
-/* Make the embedded PDF larger */
 .pdf-container iframe {
-    width: 100%;  /* Takes up full width of container */
-    height: 90vh; /* Uses 90% of the viewport height */
+    width: 100%;
+    height: 90vh;
     border: none;
 }
 
-/* Style Excel*/
-/* Container for the iframe */
+/* Excel Embed Section */
 .iframe-container {
-    width: 100%; /* Container takes full width */
-    max-width: calc(100% - 120px); /* Width minus 70px on each side */
-    margin: 0 auto; /* Centers the container horizontally */
-    padding: 0 70px; /* 70px margin left and right */
-    box-sizing: border-box; /* Ensures padding is included in the width */
+    width: 100%;
+    max-width: calc(100% - 120px);
+    margin: 0 auto;
+    padding: 0 70px;
+    box-sizing: border-box;
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Optional: centers vertically */
-    height: 100vh; /* Ensure the container takes the full viewport height */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-/* Responsive iframe styling */
 .responsive-iframe {
-    width: 100%; /* Take up full width of the container */
-    height: 90vh; /* Limit the height to 80% of the viewport height */
-    border: none; /* Removes iframe border */
+    width: 100%;
+    height: 90vh;
+    border: none;
 }
-
-
-
