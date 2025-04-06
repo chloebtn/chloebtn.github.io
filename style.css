@@ -44,6 +44,18 @@ nav a:hover {
     border-radius: 5px;
 }
 
+body, nav, footer, main {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+nav a {
+  padding: 10px;
+  display: inline-block;
+  text-decoration: none;
+}
+
 /* Footer: Customize footer styles */
 footer {
     background-color: #5F9275;  /* Dark background for footer */
