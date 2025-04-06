@@ -18,8 +18,10 @@ h3 {font-weight: 500;
 
 /* Navigation Bar: Customize the nav bar */
 nav {background-color: #5F9275;  /* Dark gray-blue color */
-    padding: 20px;
-    text-align: center;}
+    padding: 10px 20px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;}
 
 nav a {color: white;  /* White text for links */
     text-decoration: none;
@@ -58,7 +60,11 @@ footer {background-color: #5F9275;  /* Dark background for footer */
     color: #7f8c8d;}
 
 /* Projects Section in index */
-.projects {padding: 40px 0;}
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;}
 
 .projects .project {background-color: #ffffff;
     padding: 20px;
@@ -66,7 +72,9 @@ footer {background-color: #5F9275;  /* Dark background for footer */
     border-radius: 8px;
     text-align: center;
     margin-bottom: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;}
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px;
+    margin: 10px;}
 
 .projects .project img {max-width: 100%;
     border-radius: 8px;
