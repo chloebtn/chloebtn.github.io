@@ -83,7 +83,7 @@ footer {background-color: #5F9275;  /* Dark background for footer */
     margin: 10px !important;
 }
 
-.projects .project h3 {
+.projects .project h2 {
     font-size: 18px;
     font-weight: bold;
 }
