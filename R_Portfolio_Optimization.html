@@ -60,11 +60,11 @@ if (!!window.navigator.userAgent.match("MSIE 8")) {
 </script>
   
 
-// KEEP START
+
 <style>
 code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
 pre:not([class]) { background-color: white }</style>
-// KEEP END
+
 
   
 <script>
@@ -366,7 +366,7 @@ display: none;
           </div>
 
 
-          <div id="load-required-packages" class="section level2">
+          
           <h2>Load Required Packages</h2>
           <pre class="r"><code>library(quantmod)
           library(PerformanceAnalytics)
@@ -389,11 +389,11 @@ display: none;
           <li><strong>ROI.plugin.quadprog</strong> for quadratic programming
           solver</li>
           </ul>
-          </div>
+          
 
           <hr>
           
-          <div id="data-acquisition-and-preprocessing" class="section level2">
+          
           <h2>Data Acquisition and Preprocessing</h2>
             
           <pre class="r"><code># Define ticker symbols
@@ -416,11 +416,11 @@ display: none;
           <li><p><strong>Returns:</strong> Calculated as log returns, cleaned for
           NAs.</p></li>
           </ul>
-          </div>
+          
 
           <hr>
           
-          <div id="performance-analysis-and-risk-metrics" class="section level2">
+          
           <h2>Performance Analysis and Risk Metrics</h2>
             
           <pre class="r"><code># Performance summary
@@ -487,10 +487,11 @@ display: none;
           <pre><code>           
                     AAPL        MSFT       GOOGL         JPM         XOM
           ES -0.04163966 -0.03788462 -0.04364204 -0.03722302 -0.04097581</code></pre>
-          </div>
-
           
-          <div id="correlation-analysis" class="section level2">
+
+          <hr>
+          
+          
           <h2>Correlation Analysis</h2>
             
           <pre class="r"><code># Correlation matrix
@@ -510,11 +511,11 @@ display: none;
           Corp</strong> have little to no correlation with other stocks. We
           observe that all chosen stocks have positive correlation, meaning they
           will tend to move together and not opposite to each others.</p>
-          </div>
+          
 
           <hr>
           
-          <div id="portfolio-optimization-setup" class="section level2">
+          
           <h2>Portfolio Optimization Setup</h2>
           
           <pre class="r"><code># Define Portfolio
@@ -535,11 +536,11 @@ display: none;
           port_spec &lt;- add.objective(portfolio = port_spec, 
                                      type = &quot;return&quot;, 
                                      name = &quot;mean&quot;)</code></pre>
-          </div>
+          
 
           <hr>
           
-          <div id="optimization-results-and-efficient-frontier" class="section level2">
+          
           <h2>Optimization Results and Efficient Frontier</h2>
           <pre class="r"><code># Optimization
           opt_result &lt;- optimize.portfolio(R = returns, 
@@ -615,8 +616,10 @@ display: none;
           <p>AAPL’s higher annualized return and Sharpe ratio, compared to its
           counterparts, explain why it was chosen among the three highly
           correlated stocks.</p>
-          </div>
-          <div id="risk-contribution-analysis" class="section level2">
+          
+          <hr>
+          
+          
           <h2>Risk Contribution Analysis</h2>
           <pre class="r"><code>opt_weights &lt;- as.numeric(opt_weights)
           
@@ -639,11 +642,11 @@ display: none;
           XOM       0.004258789</code></pre>
           <p>The risk contribution table can be directly explained by weight
           allocaton seen above.</p>
-          </div>
+          
 
           <hr>
           
-          <div id="backtesting" class="section level2">
+          
           <h2>Backtesting</h2>
           <pre class="r"><code>benchmark_returns &lt;- Return.portfolio(R = returns,
                                                 weights = equal_weights,
@@ -704,7 +707,7 @@ display: none;
           in lower volatility than the base portfolio, improving the Sharpe ratio
           despite lower returns.</p></li>
           </ul>
-          <div id="key-takeaways" class="section level3">
+        
           <h3>Key Takeaways</h3>
           <ul>
           <li><strong>Unconstrained optimization</strong> can lead to extreme,
@@ -717,8 +720,8 @@ display: none;
           outperform more complex optimization in both return and risk-adjusted
           terms, especially when optimizer overfit or ignore diversification.</li>
           </ul>
-          </div>
-          </div>
+          
+          
           
         
       </div>        
