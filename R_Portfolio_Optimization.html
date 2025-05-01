@@ -367,7 +367,7 @@ display: none;
 
 
           
-          <h2>Load Required Packages</h2>
+          <h3>Load Required Packages</h3>
           <pre class="r"><code>library(quantmod)
           library(PerformanceAnalytics)
           library(PortfolioAnalytics)   
@@ -394,7 +394,7 @@ display: none;
           <hr>
           
           
-          <h2>Data Acquisition and Preprocessing</h2>
+          <h3>Data Acquisition and Preprocessing</h3>
             
           <pre class="r"><code># Define ticker symbols
           tickers &lt;- c(&quot;AAPL&quot;, &quot;MSFT&quot;, &quot;GOOGL&quot;, &quot;JPM&quot;, &quot;XOM&quot;)
@@ -421,7 +421,7 @@ display: none;
           <hr>
           
           
-          <h2>Performance Analysis and Risk Metrics</h2>
+          <h3>Performance Analysis and Risk Metrics</h3>
             
           <pre class="r"><code># Performance summary
           charts.PerformanceSummary(returns, 
@@ -492,7 +492,7 @@ display: none;
           <hr>
           
           
-          <h2>Correlation Analysis</h2>
+          <h3>Correlation Analysis</h3>
             
           <pre class="r"><code># Correlation matrix
           cor_matrix &lt;- cor(returns)
@@ -516,7 +516,7 @@ display: none;
           <hr>
           
           
-          <h2>Portfolio Optimization Setup</h2>
+          <h3>Portfolio Optimization Setup</h3>
           
           <pre class="r"><code># Define Portfolio
           port_spec &lt;- portfolio.spec(assets = colnames(returns))
@@ -620,7 +620,7 @@ display: none;
           <hr>
           
           
-          <h2>Risk Contribution Analysis</h2>
+          <h3>Risk Contribution Analysis</h3>
           <pre class="r"><code>opt_weights &lt;- as.numeric(opt_weights)
           
           # Portfolio volatility 
@@ -647,7 +647,7 @@ display: none;
           <hr>
           
           
-          <h2>Backtesting</h2>
+          <h3>Backtesting</h3>
           <pre class="r"><code>benchmark_returns &lt;- Return.portfolio(R = returns,
                                                 weights = equal_weights,
                                                 rebalance_on = &quot;years&quot;)
@@ -708,7 +708,7 @@ display: none;
           despite lower returns.</p></li>
           </ul>
         
-          <h3>Key Takeaways</h3>
+          <h4>Key Takeaways</h4>
           <ul>
           <li><strong>Unconstrained optimization</strong> can lead to extreme,
           concentrated bets, increasing risk and sometimes reducing risk-adjusted
