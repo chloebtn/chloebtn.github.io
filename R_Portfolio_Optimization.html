@@ -434,19 +434,19 @@ port_spec &lt;- portfolio.spec(assets = colnames(returns))
 
 # Add constraints
 port_spec &lt;- add.constraint(portfolio = port_spec, 
-                           type = &quot;full_investment&quot;)  
+                            type = &quot;full_investment&quot;)  
 
 port_spec &lt;- add.constraint(portfolio = port_spec, 
-                           type = &quot;long_only&quot;)
+                            type = &quot;long_only&quot;)
 
 # Add objectives
 port_spec &lt;- add.objective(portfolio = port_spec, 
-                          type = &quot;risk&quot;, 
-                          name = &quot;StdDev&quot;)
+                           type = &quot;risk&quot;, 
+                           name = &quot;StdDev&quot;)
 
 port_spec &lt;- add.objective(portfolio = port_spec, 
-                          type = &quot;return&quot;, 
-                          name = &quot;mean&quot;)</code></pre>
+                           type = &quot;return&quot;, 
+                           name = &quot;mean&quot;)</code></pre>
 
 
 <hr>
@@ -455,9 +455,9 @@ port_spec &lt;- add.objective(portfolio = port_spec,
 <h3>Optimization Results and Efficient Frontier</h3>
 <pre class="r"><code># Optimization
 opt_result &lt;- optimize.portfolio(R = returns, 
-                                portfolio = port_spec, 
-                                optimize_method = &quot;ROI&quot;, 
-                                trace = TRUE)
+                                 portfolio = port_spec, 
+                                 optimize_method = &quot;ROI&quot;, 
+                                 trace = TRUE)
 
 opt_result</code></pre>
 <pre><code> 
@@ -488,12 +488,12 @@ StdDev
 <pre class="r"><code># Equal-weight portfolio returns
 equal_weights &lt;- rep(1 / ncol(returns), ncol(returns))
 ew_returns &lt;- Return.portfolio(returns, 
-                              weights = equal_weights)
+                               weights = equal_weights)
 
 # Optimized portfolio returns
 opt_weights &lt;- extractWeights(opt_result)
 opt_returns &lt;- Return.portfolio(returns, 
-                               weights = opt_weights)
+                                weights = opt_weights)
 
 # Combine and plot
 combined &lt;- merge.xts(ew_returns, opt_returns)
@@ -504,8 +504,8 @@ charts.PerformanceSummary(combined, main = &quot;Performance: Equal Weight vs Op
 
 <pre class="r"><code># Efficient frontier
 ef &lt;- create.EfficientFrontier(returns, 
-                              port_spec, 
-                              type = &quot;mean-StdDev&quot;)
+                               port_spec, 
+                               type = &quot;mean-StdDev&quot;)
   
 chart.EfficientFrontier(ef, 
                         match.col = &quot;StdDev&quot;, 
@@ -563,19 +563,19 @@ allocaton seen above.</p>
 
 <h3>Backtesting</h3>
 <pre class="r"><code>benchmark_returns &lt;- Return.portfolio(R = returns,
-                                                    weights = equal_weights,
-                                                    rebalance_on = &quot;years&quot;)
+                                            weights = equal_weights,
+                                            rebalance_on = &quot;years&quot;)
 
 colnames(benchmark_returns) &lt;-&quot;benchmark&quot;
 
 base_port_spec &lt;- port_spec
 
 opt_base &lt;- optimize.portfolio.rebalancing(R = returns,
-                                          optimize_method = &quot;ROI&quot;,
-                                          portfolio = base_port_spec,
-                                          rebalance_on = &quot;quarters&quot;,
-                                          training_period = 60,
-                                          rolling_window = 60)
+                                           optimize_method = &quot;ROI&quot;,
+                                           portfolio = base_port_spec,
+                                           rebalance_on = &quot;quarters&quot;,
+                                           training_period = 60,
+                                           rolling_window = 60)
 
 base_returns &lt;- Return.portfolio(returns, extractWeights(opt_base))
 colnames(base_returns) &lt;- &quot;base&quot;
@@ -585,16 +585,16 @@ chart.Weights(opt_base, main = &quot;Unconstrained Weights&quot;)</code></pre>
 <pre class="r"><code>box_port_spec &lt;- port_spec
 
 box_port_spec &lt;- add.constraint(portfolio = box_port_spec,
-                               type = &quot;box&quot;,
-                               min = 0.05, max = 0.4,
-                               indexnum = 2)
+                                type = &quot;box&quot;,
+                                min = 0.05, max = 0.4,
+                                indexnum = 2)
 
 opt_box &lt;- optimize.portfolio.rebalancing(R = returns,
-                                         optimize_method = &quot;ROI&quot;,
-                                         portfolio = box_port_spec,
-                                         rebalance_on = &quot;quarters&quot;,
-                                         training_period = 60,
-                                         rolling_window = 60)
+                                          optimize_method = &quot;ROI&quot;,
+                                          portfolio = box_port_spec,
+                                          rebalance_on = &quot;quarters&quot;,
+                                          training_period = 60,
+                                          rolling_window = 60)
 
 box_returns &lt;- Return.portfolio(returns, extractWeights(opt_box))
 colnames(box_returns) &lt;- &quot;box&quot;
