@@ -123,7 +123,9 @@ footer {background-color: #5F9275;  /* Dark background for footer */
 
 /* About page styling*/
 .about {background-color: #ffffff;
-    text-align: center; /* Centers text */}
+    text-align: center; /* Centers text */
+    margin-left: 100px;
+    margin-right: 100px}
 
 .about .profile-img {width: 150px;
     height: 150px;
