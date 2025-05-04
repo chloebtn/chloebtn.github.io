@@ -3920,7 +3920,7 @@ cell outputs.
   height: 100%;}
 .jp-NotebookPanel.jp-Document {min-width: 240px;
   min-height: 120px;}
-.jp-Notebook {padding: var(--jp-notebook-padding);
+.jp-Notebook {
   outline: none;
   overflow: auto;
   background: var(--jp-layout-color0);}
